@@ -1,10 +1,29 @@
 import products from '../data/products.js'
-function createMenuItem(name, price, img) {
+
+
+function addlazyloading(elems) {
+  elems.forEach(el => {
+    const img = el.querySelector('img')
+
+    function loaded() {
+      el.classList.add('loaded')
+    }
+
+    if (img.complete) {
+      el.classList.add('loaded')
+    } else {
+      img.addEventListener('load', loaded)
+    }
+
+  })
+}
+
+function createMenuItem(name, price, img, thumbnail) {
   return (
     `<div class="flex h-fit justify-center">
     <div class="w-full item hover:scale-105 shadow-md hover:shadow-lg transition-all duration-300   rounded-2xl max-w-64 border p-2">
-      <div class="w-full aspect-square rounded-xl overflow-hidden border border-slate-10">
-        <img src=${img} alt="" class="w-full h-full object-cover">
+      <div class="thumbnail-div w-full aspect-square rounded-xl overflow-hidden border border-slate-10" style="background-image: url(${thumbnail});">
+       <img src=${img} alt="" class="w-full h-full object-cover">
       </div>
       <div class="py-2 font-semibold">
         <p class="line-clamp-1 name">${name}</p>
@@ -24,11 +43,11 @@ let activeMenu = 'all'
 function handlemenufilter() {
   let items = []
   if (activeMenu === 'all') {
-    items = products.map(el => createMenuItem(el.name, el.price, el.img))
+    items = products.map(el => createMenuItem(el.name, el.price, el.img, el.thumbnail))
   } else {
     for (const item of products) {
       if (item.type === activeMenu) {
-        items.push(createMenuItem(item.name, item.price, item.img))
+        items.push(createMenuItem(item.name, item.price, item.img, el.thumbnail))
       }
 
     }
@@ -45,6 +64,8 @@ function handlemenufilter() {
 }
 
 menu.innerHTML = handlemenufilter()
+const elems = menu.querySelectorAll('.thumbnail-div')
+addlazyloading(elems)
 
 for (const button of menubuttons) {
   button.addEventListener('click', (e) => {

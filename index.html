@@ -94,41 +94,48 @@
       <a href="menu.html"
         class=" mt-3 inline-block rounded-md px-4 py-1 box-border text-white bg-primary hover:bg-primarylight">View
         Menu</a>
-      <img src="./assets/basil.png" class="absolute w-32 -top-14 left-0 -z-10" alt="">
-      <img src="./assets/meat.png" class="absolute w-32 -bottom-7 right-0 -z-10" alt="">
-      <img src="./assets/onion.png" class="absolute hidden md:block w-28 -bottom-20 right-1/2 -z-10" alt="">
-      <img src="./assets/chili-green.png" class="absolute w-40 -bottom-20 -left-10 -z-10" alt="">
+      <img src="./assets/basil.png" class="absolute w-32 -top-14 left-0 -z-10" loading="lazy">
+      <img src="./assets/meat.png" class="absolute w-32 -bottom-7 right-0 -z-10" loading="lazy">
+      <img src="./assets/onion.png" class="absolute hidden md:block w-28 -bottom-20 right-1/2 -z-10" loading="lazy">
+      <img src="./assets/chili-green.png" class="absolute w-40 -bottom-20 -left-10 -z-10" loading="lazy">
 
     </div>
 
     <div class="hidden w-full h-full md:flex relative items-center justify-center ">
-      <img src="./assets/food.jpg" class="w-3/5 rounded-full imgshadow " alt="">
+      <div class="thumbnail-div w-3/5 rounded-full imgshadow overflow-hidden"
+        style="background-image: url(assets/food-thumbnail.jpg);">
+        <img src="./assets/food.jpg" class=" w-full h-full object-cover" loading="lazy">
+      </div>
 
-      <img src="./assets/tomato.png" class="absolute w-28 top-0 md:top-2  left-0 md:-left-7  -z-10" alt="">
-      <img src="./assets/chili-red.png" class="absolute w-40 -bottom-10 -right-10 -z-10" alt="">
+      <img src="./assets/tomato.png" class="absolute w-28 top-0 md:top-2  left-0 md:-left-7  -z-10" loading="lazy">
+      <img src="./assets/chili-red.png" class="absolute w-40 -bottom-10 -right-10 -z-10" loading="lazy">
     </div>
 
-    <img src="./assets/sushi.png" class="absolute w-52 top-0 -right-14 -z-10" alt="">
+    <img src="./assets/sushi.png" class="absolute w-52 top-0 -right-14 -z-10" loading="lazy">
 
   </section>
 
   <section class="mt-14 md:grid grid-cols-5 items-center mb-10 gap-4 px-3 md:px-10">
     <div class="grid grid-cols-5 grid-rows-2 col-span-3 aspect-[5/3] gap-2">
-      <!-- <img src="/food.jpg" class=" col-span-2 col-start-1 row-start-1 h-full object-cover" alt=""> -->
-      <div class="relative col-span-3 col-start-1 row-start-1 rounded-xl overflow-hidden ">
-        <img src="assets/chef.jpg" class=" absolute inset-0 object-cover w-full h-full " alt="">
+      <!-- <img src="/food.jpg" class=" col-span-2 col-start-1 row-start-1 h-full object-cover" loading="lazy"> -->
+      <div class="thumbnail-div relative col-span-3 col-start-1 row-start-1 rounded-xl overflow-hidden"
+        style="background-image: url(assets/chef-thumbnail.jpg);">
+        <img src="assets/chef.jpg" class="absolute inset-0 object-cover w-full h-full" loading="lazy">
       </div>
-      <div class="relative col-span-2 col-start-4 row-start-1 rounded-xl overflow-hidden">
-        <img src="assets/kebab.jpg" class=" absolute inset-0 object-cover w-full h-full " alt="">
+      <div class="thumbnail-div relative col-span-2 col-start-4 row-start-1 rounded-xl overflow-hidden"
+        style="background-image: url(assets/kebab-thumbnail.jpg);">
+        <img src="assets/kebab.jpg" class="absolute inset-0 object-cover w-full h-full " loading="lazy">
       </div>
-      <div class="relative col-span-2 col-start-1 row-start-2 rounded-xl overflow-hidden ">
-        <img src="assets/table.JPG" class=" absolute inset-0 object-cover w-full h-full " alt="">
+      <div class="thumbnail-div relative col-span-2 col-start-1 row-start-2 rounded-xl overflow-hidden "
+        style="background-image: url(assets/table-thumbnail.jpg);">
+        <img src="assets/table.JPG" class="absolute inset-0 object-cover w-full h-full " loading="lazy">
       </div>
-      <div class="relative col-span-3 col-start-3 row-start-2 rounded-xl overflow-hidden">
-        <img src="assets/stove.JPG" class=" absolute inset-0 object-cover w-full h-full " alt="">
+      <div class="thumbnail-div relative col-span-3 col-start-3 row-start-2 rounded-xl overflow-hidden"
+        style="background-image: url(assets/stove-thumbnail.jpg);">
+        <img src="assets/stove.JPG" class="absolute inset-0 object-cover w-full h-full " loading="lazy">
       </div>
 
-      <!-- <img src="food.jpg" class="col-span-3 row-span-2 col-start-3 aspect-square w-full rounded-xl object-cover" alt=""> -->
+      <!-- <img src="food.jpg" class="col-span-3 row-span-2 col-start-3 aspect-square w-full rounded-xl object-cover" loading="lazy"> -->
     </div>
     <div class=" col-span-2 my-auto gap-2 text-center md:text-left">
       <h1 class="text-4xl font-bold">
@@ -167,7 +174,7 @@
       <div class="flex justify-center mt-14">
         <div
           class="relative p-3 flex flex-col justify-center items-center max-w-80 h-full rounded-md bg-zinc-200 hover:shadow-md hover:shadow-zinc-400 transition-all duration-200">
-          <img src="assets/person1.JPG" alt=""
+          <img src="assets/person1.JPG" loading="lazy"
             class="absolute border-4 border-white left-1/2 -translate-x-1/2 -top-12 mx-auto w-28 h-28 rounded-full ">
           <p class="font-thin text-base text-center mt-14 ">
             <span class="font-bold text-primary text-xl font-serif">‘‘</span>
@@ -181,12 +188,13 @@
       <div class="flex justify-center mt-14">
         <div
           class="relative p-3 flex flex-col justify-center items-center w-full max-w-80 h-full rounded-md bg-zinc-200 hover:shadow-md hover:shadow-zinc-400 transition-all duration-200">
-          <img src="assets/person2.JPG" alt=""
+          <img src="assets/person2.JPG" loading="lazy"
             class="absolute border-4 border-white left-1/2 -translate-x-1/2 -top-12 mx-auto w-28 h-28 rounded-full ">
 
           <p class="font-thin text-base text-center mt-14">
             <span class="font-bold text-primary text-xl font-serif">‘‘</span>
-            The flavors burst in every bite! The presentation was exquisite, and the staff was attentive and friendly. A culinary experience like no other.
+            The flavors burst in every bite! The presentation was exquisite, and the staff was attentive and friendly. A
+            culinary experience like no other.
             <span class="font-bold text-primary text-xl font-serif">’’</span>
           </p>
           <p class="mt-2 mb-4 text-primary">Michael Anderson</p>
@@ -197,7 +205,7 @@
       <div class="flex justify-center mt-14">
         <div
           class="relative p-3 flex flex-col justify-center items-center max-w-80 h-full rounded-md bg-zinc-200 hover:shadow-md hover:shadow-zinc-400 transition-all duration-200">
-          <img src="assets/person3.JPG" alt=""
+          <img src="assets/person3.JPG" loading="lazy"
             class="absolute border-4 border-white left-1/2 -translate-x-1/2 -top-12 mx-auto w-28 h-28 rounded-full ">
 
           <p class="font-thin  text-base text-center mt-14">
@@ -225,7 +233,8 @@
         <div class="flex flex-col items-center sm:block">
 
           <img src="assets/LogoBW.svg" alt="" class="w-28 h-11">
-          <p class="max-w-48 text-xs text-center md:text-left font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. delectus
+          <p class="max-w-48 text-xs text-center md:text-left font-light">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. delectus
             debitis?</p>
           <div class="mt-2">
             <a href="#"><i class="fa-brands fa-facebook text-2xl  "></i></a>

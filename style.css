@@ -874,10 +874,6 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-20{
-  margin-top: 5rem;
-}
-
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -3005,8 +3001,7 @@ video {
 }
 
 .about {
-  background-image: url('assets/restaurant.jpg');
-  background-position: center;
+  background-image: url('assets/restaurant-thumbnail.jpg');
   background-repeat: no-repeat;
 }
 
@@ -3023,17 +3018,57 @@ video {
   }
 }
 
-.load{
+.load {
   animation: load 1s linear infinite alternate-reverse;
 }
 
 @keyframes load {
-  0%{
+  0% {
     background-color: white;
   }
 
-  100%{
+  100% {
     background-color: #b4b4b4;
+  }
+}
+
+.thumbnail-div {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.thumbnail-div::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.thumbnail-div.loaded::before{
+  content:none;
+}
+
+.thumbnail-div>img{
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.thumbnail-div.loaded>img{
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 
