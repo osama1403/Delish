@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delish</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class=" max-w-7xl overflow-x-hidden bg-white m-auto relative ">
+  <nav class="w-full sticky top-0 z-20 ">
+    <div
+      class="w-full px-3 md:px-10 h-14 py-2 bg-white bg-opacity-45 backdrop-blur-sm flex items-center justify-between">
+
+      <a href="index.html" class="h-full">
+        <img src="assets/Logo.svg" class="w-28 h-full" alt="">
+      
+      </a>
+      <div class="hidden md:flex space-x-4 items-center h-full">
+        <a href="index.html" class="h-full flex items-center px-4 hover:text-primary font-semibold">Home</a>
+        <a href="menu.html" class="h-full flex items-center px-4 text-primary hover:text-primary font-semibold">Menu</a>
+        <a href="about.html" class="h-full flex items-center px-4 hover:text-primary font-semibold">About</a>
+        <a href="reachus.html" class="h-full flex items-center px-4 hover:text-primary font-semibold">Reach Us</a>
+      </div>
+      <button id="navbutton" class="flex md:hidden justify-center  items-center h-full aspect-square">
+        <i id="navclose" class="fa fa-close text-xl text-primary hidden"></i>
+        <i id="navopen" class="fa fa-bars text-xl text-primary"></i>
+      </button>
+
+    </div>
+
+    <!-- h-[calc(100vh-56px)] -->
+    <div id='navmenu' onclick="console.log('ssss');"
+      class="w-full h-screen overflow-y-auto -z-10 absolute -left-full top-0 pointer-events-none transition-all duration-300 pt-14 bg-white bg-opacity-45 backdrop-blur-lg opacity-0 ">
+      <div class="w-full [&>*:not(:last-child)]:border-b [&>*:not(:last-child)]:bg-primary ">
+
+        <a href="index.html">
+          <div class="w-full border-b border-primary hover:bg-slate-200 p-5 text-xl hover:text-primary ">
+            <span class="block text-center mx-auto">Home</span>
+          </div>
+        </a>
+        <a href="menu.html">
+          <div class="w-full border-b border-primary hover:bg-slate-200 p-5 text-xl hover:text-primary text-primary">
+            <span class="block text-center mx-auto">Menu</span>
+          </div>
+        </a>
+        <a href="About.html">
+          <div class="w-full border-b border-primary hover:bg-slate-200 p-5 text-xl hover:text-primary ">
+            <span class="block text-center mx-auto">About</span>
+          </div>
+        </a>
+        <a href="reachus.html">
+          <div class="w-full hover:bg-slate-200 p-5 text-xl  hover:text-primary">
+            <span class="block text-center mx-auto">Reach Us</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <script>
+      document.getElementById('navbutton').addEventListener('click', toggleNav)
+      function toggleNav() {
+        document.getElementById('navmenu').classList.toggle('-left-full')
+        document.getElementById('navmenu').classList.toggle('left-0')
+        document.getElementById('navmenu').classList.toggle('opacity-0')
+        document.getElementById('navmenu').classList.toggle('pointer-events-none')
+        document.getElementById('navclose').classList.toggle('hidden')
+        document.getElementById('navopen').classList.toggle('hidden')
+        document.body.classList.toggle('overflow-y-clip')
+      }
+    </script>
+
+  </nav>
+
+  <section class="min-h-screen mt-6 mb-14 px-3 md:px-10">
+    <h1 class="capitalize text-6xl text-primary menu text-center font-bold  font-Dancing">our menu</h1>
+    <div class="flex justify-center gap-3 md:gap-8 flex-wrap mx-auto mt-6 text-lg font-normal">
+      <button id="all"
+        class="px-5 border border-primary rounded-sm menubutton duration-300 transition-all bg-primary text-white ">All</button>
+      <button id="appetizer"
+        class="px-5 border border-primary rounded-sm menubutton duration-300 transition-all">Appetizer</button>
+      <button id="main"
+        class="px-5 border border-primary rounded-sm menubutton duration-300 transition-all">Main</button>
+      <button id="dessert"
+        class="px-5 border border-primary rounded-sm menubutton duration-300 transition-all">Dessert</button>
+      <button id="drink"
+        class="px-5 border border-primary rounded-sm menubutton duration-300 transition-all">Drinks</button>
+    </div>
+
+    
+      <div id="menu"
+        class="grid grid-flow-row relative grid-cols-[repeat(auto-fill,minmax(165px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(205px,1fr))] min-h-80 gap-6 mt-6">
+
+      </div>
+      
+
+  </section>
+
+  
+  <footer class=" px-10 py-12 bg-zinc-900 w-full text-white">
+    <div class="flex flex-col gap-8 sm:gap-0 sm:flex-row justify-around items-center sm:items-start ">
+
+      <div class="self-center flex flex-col justify-between items-center sm:items-start">
+        <div class="flex flex-col items-center sm:block">
+
+          <img src="assets/LogoBW.svg" alt="" class="w-28 h-11">
+          <p class="max-w-48 text-xs text-center md:text-left font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. delectus
+            debitis?</p>
+          <div class="mt-2">
+            <a href="#"><i class="fa-brands fa-facebook text-2xl  "></i></a>
+            <a href="#"><i class="fa-brands fa-instagram text-2xl ml-4"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter text-2xl ml-4"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="text-center sm:text-left">
+        <p class="font-bold">Links:</p>
+        <a href="#" class="block mt-2 font-extralight">Home</a>
+        <a href="#" class="block mt-2 font-extralight">About</a>
+        <a href="#" class="block mt-2 font-extralight">Menu</a>
+        <a href="#" class="block mt-2 font-extralight">Contact Us</a>
+      </div>
+      <div>
+        <p class="font-bold">Contact Us:</p>
+        <div class="mt-2 flex items-start">
+          <i class="fa-solid fa-envelope text-sm text-primary"></i> <span class="ml-2">delish@gmail.com</span>
+        </div>
+        <div class="mt-2 flex items-start">
+          <i class="fa-solid fa-phone text-sm text-primary"></i>
+          <span class="font-semibold ml-2">+1 234 5678 9123 </span>
+        </div>
+        <div class="mt-2 flex items-start">
+          <i class="fa-solid fa-location-dot text-base text-primary"></i>
+          <span class="font-light max-w-36 inline-block ml-2">Lorem ipsum dolor sit amet consectetur.</span>
+        </div>
+      </div>
+
+
+    </div>
+    <p class="text-center text-lg font-thin text-zinc-400 mt-8">Developed By: Osama Abo Ajeeb</p>
+  </footer>
+
+
+  <script type="module" src="js/menu.js"></script>
+</body>
+</html>

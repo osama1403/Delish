@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class=" max-w-7xl overflow-x-hidden bg-white m-auto relative ">
+  <nav class="w-full sticky top-0 z-20 ">
+    <div
+      class="w-full px-3 md:px-10 h-14 py-2 bg-white bg-opacity-45 backdrop-blur-sm flex items-center justify-between">
+
+      <a href="index.html" class="h-full">
+        <img src="assets/Logo.svg" class="w-28 h-full" alt="">
+
+      </a>
+      <div class="hidden md:flex space-x-4 items-center h-full">
+        <a href="index.html"
+          class="h-full flex items-center px-4 text-primary hover:text-primary font-semibold">Home</a>
+        <a href="menu.html" class="h-full flex items-center px-4 hover:text-primary font-semibold">Menu</a>
+        <a href="about.html" class="h-full flex items-center px-4 hover:text-primary font-semibold">About</a>
+        <a href="reachus.html" class="h-full flex items-center px-4 hover:text-primary font-semibold">Reach Us</a>
+      </div>
+      <button id="navbutton" class="flex md:hidden justify-center  items-center h-full aspect-square">
+        <i id="navclose" class="fa fa-close text-xl text-primary hidden"></i>
+        <i id="navopen" class="fa fa-bars text-xl text-primary"></i>
+      </button>
+
+    </div>
+
+    <!-- h-[calc(100vh-56px)] -->
+    <div id='navmenu' onclick="console.log('ssss');"
+      class="w-full h-screen overflow-y-auto -z-10 absolute -left-full top-0 pointer-events-none transition-all duration-300 pt-14 bg-white bg-opacity-45 backdrop-blur-lg opacity-0 ">
+      <div class="w-full [&>*:not(:last-child)]:border-b [&>*:not(:last-child)]:bg-primary ">
+
+        <a href="index.html">
+          <div class="w-full border-b border-primary hover:bg-slate-200 p-5 text-xl hover:text-primary text-primary">
+            <span class="block text-center mx-auto">Home</span>
+          </div>
+        </a>
+        <a href="menu.html">
+          <div class="w-full border-b border-primary hover:bg-slate-200 p-5 text-xl hover:text-primary">
+            <span class="block text-center mx-auto">Menu</span>
+          </div>
+        </a>
+        <a href="about.html">
+          <div class="w-full border-b border-primary hover:bg-slate-200 p-5 text-xl hover:text-primary">
+            <span class="block text-center mx-auto">About</span>
+          </div>
+        </a>
+        <a href="reachus.html">
+          <div class="w-full hover:bg-slate-200 p-5 text-xl hover:text-primary">
+            <span class="block text-center mx-auto">Reach Us</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <script>
+      document.getElementById('navbutton').addEventListener('click', toggleNav)
+      function toggleNav() {
+        document.getElementById('navmenu').classList.toggle('-left-full')
+        document.getElementById('navmenu').classList.toggle('left-0')
+        document.getElementById('navmenu').classList.toggle('opacity-0')
+        document.getElementById('navmenu').classList.toggle('pointer-events-none')
+        document.getElementById('navclose').classList.toggle('hidden')
+        document.getElementById('navopen').classList.toggle('hidden')
+        document.body.classList.toggle('overflow-y-clip')
+      }
+    </script>
+
+  </nav>
+
+
+
+  <section
+    class=" min-h-[calc(100vh-56px)] relative py-6 overflow-hidden grid md:grid-cols-2 items-center px-3 md:px-10">
+
+    <div class="py-10 relative text-center md:text-left">
+      <h1 class="text-5xl font-bold ">Delicious <span class="text-green-500">food</span> <br> Exceptional <span
+          class="text-primary">service</span>
+      </h1>
+      <p class="text-xl font-semibold mt-4">Discover a place where flavorful dishes and attentive service create
+        unforgettable dining memories.</p>
+
+      <a href="menu.html"
+        class=" mt-3 inline-block rounded-md px-4 py-1 box-border text-white bg-primary hover:bg-primarylight">View
+        Menu</a>
+      <img src="./assets/basil.png" class="absolute w-32 -top-14 left-0 -z-10" alt="">
+      <img src="./assets/meat.png" class="absolute w-32 -bottom-7 right-0 -z-10" alt="">
+      <img src="./assets/onion.png" class="absolute hidden md:block w-28 -bottom-20 right-1/2 -z-10" alt="">
+      <img src="./assets/chili-green.png" class="absolute w-40 -bottom-20 -left-10 -z-10" alt="">
+
+    </div>
+
+    <div class="hidden w-full h-full md:flex relative items-center justify-center ">
+      <img src="./assets/food.jpg" class="w-3/5 rounded-full imgshadow " alt="">
+
+      <img src="./assets/tomato.png" class="absolute w-28 top-0 md:top-2  left-0 md:-left-7  -z-10" alt="">
+      <img src="./assets/chili-red.png" class="absolute w-40 -bottom-10 -right-10 -z-10" alt="">
+    </div>
+
+    <img src="./assets/sushi.png" class="absolute w-52 top-0 -right-14 -z-10" alt="">
+
+  </section>
+
+  <section class="mt-14 md:grid grid-cols-5 items-center mb-10 gap-4 px-3 md:px-10">
+    <div class="grid grid-cols-5 grid-rows-2 col-span-3 aspect-[5/3] gap-2">
+      <!-- <img src="/food.jpg" class=" col-span-2 col-start-1 row-start-1 h-full object-cover" alt=""> -->
+      <div class="relative col-span-3 col-start-1 row-start-1 rounded-xl overflow-hidden ">
+        <img src="assets/chef.jpg" class=" absolute inset-0 object-cover w-full h-full " alt="">
+      </div>
+      <div class="relative col-span-2 col-start-4 row-start-1 rounded-xl overflow-hidden">
+        <img src="assets/kebab.jpg" class=" absolute inset-0 object-cover w-full h-full " alt="">
+      </div>
+      <div class="relative col-span-2 col-start-1 row-start-2 rounded-xl overflow-hidden ">
+        <img src="assets/table.JPG" class=" absolute inset-0 object-cover w-full h-full " alt="">
+      </div>
+      <div class="relative col-span-3 col-start-3 row-start-2 rounded-xl overflow-hidden">
+        <img src="assets/stove.JPG" class=" absolute inset-0 object-cover w-full h-full " alt="">
+      </div>
+
+      <!-- <img src="food.jpg" class="col-span-3 row-span-2 col-start-3 aspect-square w-full rounded-xl object-cover" alt=""> -->
+    </div>
+    <div class=" col-span-2 my-auto gap-2 text-center md:text-left">
+      <h1 class="text-4xl font-bold">
+        Flavors that excite your tongue
+      </h1>
+      <p class="text-base mt-2 font-medium">Get ready for an incredible culinary adventure that will excite your taste
+        buds. Our outstanding service goes above and beyond, ensuring your dining experience is truly exceptional.
+        Delight in a wide selection of mouthwatering flavors, expertly prepared, all while our friendly staff takes care
+        of every detail. Come and discover a world of culinary delight at our restaurant</p>
+      <a href="about.html"
+        class=" mt-3 inline-block rounded-md px-4 py-1 box-border text-white bg-primary hover:bg-primarylight ">More
+        About Us</a>
+    </div>
+
+  </section>
+
+  <section class="mt-14 mb-20 px-3 md:px-10">
+    <h1 class="capitalize text-3xl font-semibold text-center">Popular Dishes</h1>
+    <div class="min-h-80 ">
+      <div id="menu"
+        class="grid grid-flow-row relative grid-cols-[repeat(auto-fill,minmax(165px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(205px,1fr))] min-h-80 gap-6 mt-6">
+      </div>
+      <div class="flex justify-center mt-6">
+        <a href="menu.html"
+          class=" inline-block rounded-md px-4 py-1 box-border text-white bg-primary hover:bg-primarylight">See Full
+          Menu</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class=" my-14  px-3 ">
+    <h1 class="text-center text-primary text-3xl">what people say about us</h1>
+    <div class="grid gap-4 mt-20 md:grid-cols-3 ">
+
+      <div class="flex justify-center">
+        <div
+          class="relative p-3 flex flex-col justify-center items-center max-w-80 h-full rounded-md bg-zinc-200 hover:shadow-md hover:shadow-zinc-400 transition-all duration-200">
+          <img src="assets/person1.JPG" alt=""
+            class="absolute border-4 border-white left-1/2 -translate-x-1/2 -top-12 mx-auto w-28 h-28 rounded-full ">
+          <p class="font-thin text-base text-center mt-14 ">
+            <span class="font-bold text-primary text-xl font-serif">‘‘</span>
+            Delicious food, impeccable service, and a cozy atmosphere. This restaurant exceeded my expectations in every
+            way!
+            <span class="font-bold text-primary text-xl font-serif">’’</span>
+          </p>
+          <p class="mt-2 mb-4 text-primary">Sarah Thompson</p>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div
+          class="relative p-3 flex flex-col justify-center items-center w-full max-w-80 h-full rounded-md bg-zinc-200 hover:shadow-md hover:shadow-zinc-400 transition-all duration-200">
+          <img src="assets/person2.JPG" alt=""
+            class="absolute border-4 border-white left-1/2 -translate-x-1/2 -top-12 mx-auto w-28 h-28 rounded-full ">
+
+          <p class="font-thin text-base text-center mt-14">
+            <span class="font-bold text-primary text-xl font-serif">‘‘</span>
+            The flavors burst in every bite! The presentation was exquisite, and the staff was attentive and friendly. A culinary experience like no other.
+            <span class="font-bold text-primary text-xl font-serif">’’</span>
+          </p>
+          <p class="mt-2 mb-4 text-primary">Michael Anderson</p>
+
+
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div
+          class="relative p-3 flex flex-col justify-center items-center max-w-80 h-full rounded-md bg-zinc-200 hover:shadow-md hover:shadow-zinc-400 transition-all duration-200">
+          <img src="assets/person3.JPG" alt=""
+            class="absolute border-4 border-white left-1/2 -translate-x-1/2 -top-12 mx-auto w-28 h-28 rounded-full ">
+
+          <p class="font-thin  text-base text-center mt-14">
+            <span class="font-bold text-primary text-xl font-serif">‘‘</span>
+            From the moment we stepped in, we were treated like royalty. The menu offered a fantastic variety, and the
+            taste was out of this world. Highly recommended!
+            <span class="font-bold text-primary text-xl font-serif">’’</span>
+          </p>
+          <p class="mt-2 mb-4 text-primary">Isabella Hernandez</p>
+
+        </div>
+      </div>
+
+
+
+
+  </section>
+
+
+
+  <footer class=" px-10 py-12 bg-zinc-900 w-full text-white">
+    <div class="flex flex-col gap-8 sm:gap-0 sm:flex-row justify-around items-center sm:items-start ">
+
+      <div class="self-center flex flex-col justify-between items-center sm:items-start">
+        <div class="flex flex-col items-center sm:block">
+
+          <img src="assets/LogoBW.svg" alt="" class="w-28 h-11">
+          <p class="max-w-48 text-xs text-center md:text-left font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. delectus
+            debitis?</p>
+          <div class="mt-2">
+            <a href="#"><i class="fa-brands fa-facebook text-2xl  "></i></a>
+            <a href="#"><i class="fa-brands fa-instagram text-2xl ml-4"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter text-2xl ml-4"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="text-center sm:text-left">
+        <p class="font-bold">Links:</p>
+        <a href="#" class="block mt-2 font-extralight">Home</a>
+        <a href="#" class="block mt-2 font-extralight">About</a>
+        <a href="#" class="block mt-2 font-extralight">Menu</a>
+        <a href="#" class="block mt-2 font-extralight">Contact Us</a>
+      </div>
+      <div>
+        <p class="font-bold">Contact Us:</p>
+        <div class="mt-2 flex items-start">
+          <i class="fa-solid fa-envelope text-sm text-primary"></i> <span class="ml-2">delish@gmail.com</span>
+        </div>
+        <div class="mt-2 flex items-start">
+          <i class="fa-solid fa-phone text-sm text-primary"></i>
+          <span class="font-semibold ml-2">+1 234 5678 9123 </span>
+        </div>
+        <div class="mt-2 flex items-start">
+          <i class="fa-solid fa-location-dot text-base text-primary"></i>
+          <span class="font-light max-w-36 inline-block ml-2">Lorem ipsum dolor sit amet consectetur.</span>
+        </div>
+      </div>
+
+
+    </div>
+    <p class="text-center text-lg font-thin text-zinc-400 mt-8">Developed By: Osama Abo Ajeeb</p>
+  </footer>
+
+
+  <script src="js/script.js" type="module"></script>
+</body>
+
+</html>

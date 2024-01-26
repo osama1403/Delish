@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class=" max-w-7xl overflow-x-hidden bg-white m-auto relative ">
+
+  <nav class="w-full sticky top-0 z-20 ">
+    <div
+      class="w-full px-3 md:px-10 h-14 py-2 bg-white bg-opacity-45 backdrop-blur-sm flex items-center justify-between">
+
+      <a href="index.html" class="h-full">
+        <img src="assets/Logo.svg" class="w-28 h-full" alt="">
+
+      </a>
+      <div class="hidden md:flex space-x-4 items-center h-full">
+        <a href="index.html" class="h-full flex items-center px-4 hover:text-primary font-semibold">Home</a>
+        <a href="menu.html" class="h-full flex items-center px-4  hover:text-primary font-semibold">Menu</a>
+        <a href="about.html" class="h-full flex items-center px-4 hover:text-primary font-semibold">About</a>
+        <a href="reachus.html" class="h-full flex items-center px-4 text-primary hover:text-primary font-semibold">Reach
+          Us</a>
+      </div>
+      <button id="navbutton" class="flex md:hidden justify-center  items-center h-full aspect-square">
+        <i id="navclose" class="fa fa-close text-xl text-primary hidden"></i>
+        <i id="navopen" class="fa fa-bars text-xl text-primary"></i>
+      </button>
+
+    </div>
+
+    <!-- h-[calc(100vh-56px)] -->
+    <div id='navmenu' onclick="console.log('ssss');"
+      class="w-full h-screen overflow-y-auto -z-10 absolute -left-full top-0 pointer-events-none transition-all duration-300 pt-14 bg-white bg-opacity-45 backdrop-blur-lg opacity-0 ">
+      <div class="w-full [&>*:not(:last-child)]:border-b [&>*:not(:last-child)]:bg-primary ">
+
+        <a href="index.html">
+          <div class="w-full border-b border-primary hover:bg-slate-200 p-5 text-xl hover:text-primary ">
+            <span class="block text-center mx-auto">Home</span>
+          </div>
+        </a>
+        <a href="menu.html">
+          <div class="w-full border-b border-primary hover:bg-slate-200 p-5 text-xl hover:text-primary ">
+            <span class="block text-center mx-auto">Menu</span>
+          </div>
+        </a>
+        <a href="About.html">
+          <div class="w-full border-b border-primary hover:bg-slate-200 p-5 text-xl hover:text-primary ">
+            <span class="block text-center mx-auto">About</span>
+          </div>
+        </a>
+        <a href="reachus.html">
+          <div class="w-full hover:bg-slate-200 p-5 text-xl text-primary hover:text-primary">
+            <span class="block text-center mx-auto">Reach Us</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <script>
+      document.getElementById('navbutton').addEventListener('click', toggleNav)
+      function toggleNav() {
+        document.getElementById('navmenu').classList.toggle('-left-full')
+        document.getElementById('navmenu').classList.toggle('left-0')
+        document.getElementById('navmenu').classList.toggle('opacity-0')
+        document.getElementById('navmenu').classList.toggle('pointer-events-none')
+        document.getElementById('navclose').classList.toggle('hidden')
+        document.getElementById('navopen').classList.toggle('hidden')
+        document.body.classList.toggle('overflow-y-clip')
+      }
+    </script>
+
+  </nav>
+  <section class="min-h-[calc(100vh-56px)]  mt-6 mb-14 px-3  flex justify-center items-center">
+    <div class="md:grid md:grid-cols-5 w-full max-w-4xl items-center gap-4 ">
+
+      <div class="relative w-full py-10 md:px-6 col-span-3 col-start-1 bg-orange-100 bg-opacity-50 h-fit">
+        <div class=" hidden md:block absolute left-10  -top-6 bottom-0 w-28 h-[112%] md:bg-orange-400 -z-10"></div>
+
+        <div class="py-2 px-3 mx-auto mb-4 w-full max-w-72 bg-white bg-opacity-50 border-orange-400 border  rounded-md ">
+          <div class=" flex items-center justify-start text-xl font-semibold gap-3">
+            <i class="fa-solid fa-phone text-primary"></i>
+            <span>Call Us:</span>
+          </div>
+          <p class="font-semibold ml-2">+1 234 5678 9123 </p>
+        </div>
+
+        <div class="py-2 px-3 mx-auto mb-4 w-full max-w-72 bg-white bg-opacity-50 border-orange-400 border rounded-md">
+          <div class=" flex items-center justify-start text-xl font-semibold gap-3">
+            <i class="fa-solid fa-location-dot text-primary"></i>
+            <span>Location:</span>
+          </div>
+          <p class="font-semibold ml-2">1651 Adeline St, Oakland, CA 94607 </p>
+        </div>
+
+        <div class=" py-2 px-3 mx-auto mb-4 w-full max-w-72 bg-white bg-opacity-50 border-orange-400 border  rounded-md">
+          <div class=" flex items-center justify-start text-xl font-semibold gap-3">
+            <i class="fa fa-clock text-primary"></i>
+            <span>Business Hours:</span>
+          </div>
+          <p class="font-semibold ml-2">Open 24 Hours</p>
+        </div>
+
+        <div class=" py-2 px-3 mx-auto w-full max-w-72 bg-white bg-opacity-50 border-orange-400 border  rounded-md">
+          <div class=" flex items-center justify-evenly  text-primary text-xl font-semibold gap-3">
+            <a href="#"><i class="fa-brands fa-facebook text-2xl hover:text-blue-500 "></i></a>
+            <a href="#"><i class="fa-brands fa-instagram text-2xl hover:text-red-400 ml-4"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter text-2xl hover:text-black ml-4"></i></a>
+          </div>
+        </div>
+
+
+      </div>
+
+      
+      <iframe class="col-span-2 load col-start-4 aspect-square max-w-sm mx-auto"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2395.309179192626!2d-122.28407518574858!3d37.811745487735074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f80a0120a9cf7%3A0xf6b3c6bc1a77cca3!2sDe%20Fremery%20Park!5e1!3m2!1sar!2s!4v1705419988596!5m2!1sar!2s"
+        width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+  </section>
+
+
+  <footer class=" px-10 py-12 bg-zinc-900 w-full text-white">
+    <div class="flex flex-col gap-8 sm:gap-0 sm:flex-row justify-around items-center sm:items-start ">
+
+      <div class="self-center flex flex-col justify-between items-center sm:items-start">
+        <div class="flex flex-col items-center sm:block">
+
+          <img src="assets/LogoBW.svg" alt="" class="w-28 h-11">
+          <p class="max-w-48 text-xs text-center md:text-left font-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. delectus
+            debitis?</p>
+          <div class="mt-2">
+            <a href="#"><i class="fa-brands fa-facebook text-2xl  "></i></a>
+            <a href="#"><i class="fa-brands fa-instagram text-2xl ml-4"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter text-2xl ml-4"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="text-center sm:text-left">
+        <p class="font-bold">Links:</p>
+        <a href="#" class="block mt-2 font-extralight">Home</a>
+        <a href="#" class="block mt-2 font-extralight">About</a>
+        <a href="#" class="block mt-2 font-extralight">Menu</a>
+        <a href="#" class="block mt-2 font-extralight">Contact Us</a>
+      </div>
+      <div>
+        <p class="font-bold">Contact Us:</p>
+        <div class="mt-2 flex items-start">
+          <i class="fa-solid fa-envelope text-sm text-primary"></i> <span class="ml-2">delish@gmail.com</span>
+        </div>
+        <div class="mt-2 flex items-start">
+          <i class="fa-solid fa-phone text-sm text-primary"></i>
+          <span class="font-semibold ml-2">+1 234 5678 9123 </span>
+        </div>
+        <div class="mt-2 flex items-start">
+          <i class="fa-solid fa-location-dot text-base text-primary"></i>
+          <span class="font-light max-w-36 inline-block ml-2">Lorem ipsum dolor sit amet consectetur.</span>
+        </div>
+      </div>
+
+
+    </div>
+    <p class="text-center text-lg font-thin text-zinc-400 mt-8">Developed By: Osama Abo Ajeeb</p>
+  </footer>
+</body>
+
+</html>
