@@ -47,7 +47,7 @@ function handlemenufilter() {
   } else {
     for (const item of products) {
       if (item.type === activeMenu) {
-        items.push(createMenuItem(item.name, item.price, item.img, el.thumbnail))
+        items.push(createMenuItem(item.name, item.price, item.img, item.thumbnail))
       }
 
     }
