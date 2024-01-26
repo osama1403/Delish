@@ -9,7 +9,7 @@ export default [
     "name": "Cappuccino",
     "price": 599,
     "type": "drink",
-    "img": "./assets/products/Cappuccino.jpg"
+    "img": "./assets/products/cappuccino.jpg"
   },
   {
     "name": "Espresso",
