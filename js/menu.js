@@ -75,6 +75,8 @@ for (const button of menubuttons) {
     e.target.classList = activeMenuButtonStyle
     activeMenu = e.target.id.toLowerCase()
     menu.innerHTML = handlemenufilter()
+    const elems = menu.querySelectorAll('.thumbnail-div')
+    addlazyloading(elems)
   });
 }
 
